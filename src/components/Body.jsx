@@ -264,8 +264,8 @@ const Body = (props) => {
           )}
           {props.val === 2 ? <div>Hello 2</div> : ""}
           {props.val === 3 ? <div>Hello 3</div> : ""}
-          {props.val === 4 ? <div>hello 4</div> : ""}
-          {props.val === 5 ? <div>hello 5</div> : ""}
+          {props.val === 4 ? <div>Hello 4</div> : ""}
+          {props.val === 5 ? <div>Hello 5</div> : ""}
         </div>
       </div>
     </>
