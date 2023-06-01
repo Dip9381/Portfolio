@@ -262,7 +262,7 @@ const Body = (props) => {
           ) : (
             ""
           )}
-          {props.val === 2 ? <div>hello 2</div> : ""}
+          {props.val === 2 ? <div>Hello 2</div> : ""}
           {props.val === 3 ? <div>hello 3</div> : ""}
           {props.val === 4 ? <div>hello 4</div> : ""}
           {props.val === 5 ? <div>hello 5</div> : ""}
