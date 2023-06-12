@@ -1,39 +1,53 @@
-import React from "react";
+import React, { useState } from "react";
 import frame from "./images/frame.jpg";
 import profile from "./images/own.jpg";
 import resume from "../downloadable/RESUME.pdf";
 
 const Body = (props) => {
+  const [showCont, setShowCont] = useState(2);
+  const [active, setactive] = useState(-1);
+  let timeoutId;
+
+  const handleMouseOver = (e,f) => {
+    clearTimeout(timeoutId);
+    timeoutId = setTimeout(() => {
+      setShowCont(e);
+      setactive(f);
+    }, 200); // Delay of 200ms
+  };
+
+  const handleMouseOut = (e,f) => {
+    clearTimeout(timeoutId);
+    timeoutId = setTimeout(() => {
+      setShowCont(e);
+      setactive(-1);
+    }, 200); // Delay of 200ms
+  };
   return (
     <>
       <div id="contain">
-        
-      <div className="night">
-    <div class="shooting_star"></div>
-  <div class="shooting_star"></div>
-  <div class="shooting_star"></div>
-  <div class="shooting_star"></div>
-  <div class="shooting_star"></div>
-  <div class="shooting_star"></div>
-  <div class="shooting_star"></div>
-  <div class="shooting_star"></div>
-  <div class="shooting_star"></div>
-  <div class="shooting_star"></div>
-  <div class="shooting_star"></div>
-  <div class="shooting_star"></div>
-  <div class="shooting_star"></div>
-  <div class="shooting_star"></div>
-  <div class="shooting_star"></div>
-  <div class="shooting_star"></div>
-  <div class="shooting_star"></div>
-  <div class="shooting_star"></div>
-  <div class="shooting_star"></div>
-  <div class="shooting_star"></div>
-    </div>
-  
-
-
-
+        <div className="night">
+          <div class="shooting_star"></div>
+          <div class="shooting_star"></div>
+          <div class="shooting_star"></div>
+          <div class="shooting_star"></div>
+          <div class="shooting_star"></div>
+          <div class="shooting_star"></div>
+          <div class="shooting_star"></div>
+          <div class="shooting_star"></div>
+          <div class="shooting_star"></div>
+          <div class="shooting_star"></div>
+          <div class="shooting_star"></div>
+          <div class="shooting_star"></div>
+          <div class="shooting_star"></div>
+          <div class="shooting_star"></div>
+          <div class="shooting_star"></div>
+          <div class="shooting_star"></div>
+          <div class="shooting_star"></div>
+          <div class="shooting_star"></div>
+          <div class="shooting_star"></div>
+          <div class="shooting_star"></div>
+        </div>
 
         <div className="box1">
           <div>
@@ -41,7 +55,7 @@ const Body = (props) => {
               <img id="profile" src={profile} alt="" />
               <img id="frame" src={frame} alt="" />
             </div>
-            <div>
+            <div id="bio">
               <div id="name">Dipansu Rout</div>
               Computer Science Engineering
               <br /> 4Th year BTECH <br />
@@ -228,43 +242,269 @@ const Body = (props) => {
                 <center>
                   <h2>Undergraduate</h2>
                   <h3>2020 - ongoing</h3>
-                <p>
-                  Vellore Institute Of Technology,Chennai <br />
-                  BTECH Computer Science Engineering <br />
-                  Specialisation Cyber Physical Systems <br />
-                  Current cgpa : 8.56
-                </p>
+                  <p>
+                    Vellore Institute Of Technology,Chennai <br />
+                    BTECH Computer Science Engineering <br />
+                    Specialisation Cyber Physical Systems <br />
+                    Current cgpa : 8.56
+                  </p>
                 </center>
               </div>
               <div className="edu2">
                 <div>
-                <center>
-                  <h2>12th standard</h2>
-                  <h3>2018 - 2020</h3>
-                <p>
-                  DAV PUBLIC SCHOOL,UNIT-8, ODISHA <br />
-                  CBSE 12th final : 95%
-                </p>
-                </center>
+                  <center>
+                    <h2>12th standard</h2>
+                    <h3>2018 - 2020</h3>
+                    <p>
+                      DAV PUBLIC SCHOOL,UNIT-8, ODISHA <br />
+                      CBSE 12th final : 95%
+                    </p>
+                  </center>
                 </div>
                 <div>
-                <center>
-                  <h2>10th standard</h2>
-                  <h3>upto 2018</h3>
-                <p>
-                DAV PUBLIC SCHOOL,UNIT-8, ODISHA <br />
-                  CBSE 10th final : 91.6%
-                </p>
-                </center>
+                  <center>
+                    <h2>10th standard</h2>
+                    <h3>upto 2018</h3>
+                    <p>
+                      DAV PUBLIC SCHOOL,UNIT-8, ODISHA <br />
+                      CBSE 10th final : 91.6%
+                    </p>
+                  </center>
                 </div>
               </div>
             </div>
           ) : (
             ""
           )}
-          {props.val === 2 ? <div>Hello 2</div> : ""}
           {props.val === 3 ? <div>Hello 3</div> : ""}
-          {props.val === 4 ? <div>Hello 4</div> : ""}
+          {props.val === 4 ? (
+            <div>
+              <div id="block">
+                <div
+                  className="card"
+                  onMouseOver={()=>{handleMouseOver(2,1)}}
+                  onMouseOut={()=>{handleMouseOut(1,1)}}
+                >
+                  {active===1?
+                  <>
+                {showCont===2 && <div className="cont">
+                <div>
+                    A fully functional webpage with react hooks implementing dynamic data from apis' provided by the institution and a responsive page for both handheld devices and pc/desktops.
+                  </div>
+                  <button onClick={()=>{}}>click here to visit</button>
+                  </div>}
+                  </>
+                  :
+                  <div className="heading">
+                  Nalco <br /> Intranet <br /> Website
+                  </div>
+                  }
+                </div>
+                 <div
+                  className="card"
+                  onMouseOver={()=>{handleMouseOver(2,2)}}
+                  onMouseOut={()=>{handleMouseOut(1,2)}}
+                >
+                  {active===2?
+                  <>
+                {showCont===2 && <div className="cont">
+                <div>
+                    A fullstack implemntation using MERN. The project comprises of both student and teacher login where the teacher can view coressponding student details. For a student login it has biodata, marks , attendance and payment page. Additionally the portal has login authentication and also password change facility.
+                  </div>
+                  <button onClick={()=>{}}>click here to visit</button>
+                  </div>}
+                  </>
+                  :
+                  <div className="heading">
+                  College <br /> Portal 
+                  </div>
+                  }
+                </div>
+                 <div
+                  className="card"
+                  onMouseOver={()=>{handleMouseOver(2,3)}}
+                  onMouseOut={()=>{handleMouseOut(1,3)}}
+                >
+                  {active===3?
+                  <>
+                {showCont===2 && <div className="cont">
+                <div>
+                    Here we have utilised pug template engine on express js to create the client side apllication and browser local storage to make the notes making real time.
+                  </div>
+                  <button onClick={()=>{}}>click here to visit</button>
+                  </div>}
+                  </>
+                  :
+                  <div className="heading">
+                  Notes <br /> Saving 
+                  </div>
+                  }
+                </div>
+                 <div
+                  className="card"
+                  onMouseOver={()=>{handleMouseOver(2,4)}}
+                  onMouseOut={()=>{handleMouseOut(1,4)}}
+                >
+                  {active===4?
+                  <>
+                {showCont===2 && <div className="cont">
+                <div>
+                    A complete api tour, where multiple apis' has been used for weather forecast for next 8 days, live weather report, articles and normal news that refreshes to a new content on each reload for dynamic preview of data.
+                  </div>
+                  <button onClick={()=>{}}>click here to visit</button>
+                  </div>}
+                  </>
+                  :
+                  <div className="heading">
+                  Weather Sense
+                  </div>
+                  }
+                </div>
+                 <div
+                  className="card"
+                  onMouseOver={()=>{handleMouseOver(2,5)}}
+                  onMouseOut={()=>{handleMouseOut(1,5)}}
+                >
+                  {active===5?
+                  <>
+                {showCont===2 && <div className="cont">
+                <div>
+                    A simple example of javascript functions used in react achieved using onkeyup attribute.
+                  </div>
+                  <button onClick={()=>{}}>click here to visit</button>
+                  </div>}
+                  </>
+                  :
+                  <div className="heading">
+                  Responsive Paragraph word counter
+                  </div>
+                  }
+                </div>
+               {/* <div
+                  className="card"
+                  onMouseOver={handleMouseOver}
+                  onMouseOut={handleMouseOut}
+                >
+                  {!showCont && <div className="face">
+                    <div>
+                    Nalco <br /> Intranet <br /> Website
+                    </div>
+                    </div>}
+                  {showCont && <div className="cont">
+                  <div>
+                      A fully functional webpage with react hooks implementing dynamic data from apis' provided by the institution and a responsive page for both handheld devices and pc/desktops.
+                    </div>
+                    <button onClick={()=>{}}>click here to visit</button>
+                    </div>}
+                </div>
+                <div
+                  className="card"
+                  onMouseOver={handleMouseOver}
+                  onMouseOut={handleMouseOut}
+                >
+                  {!showCont && <div className="face">
+                    <div>
+                    Nalco <br /> Intranet <br /> Website
+                    </div>
+                    </div>}
+                  {showCont && <div className="cont">
+                  <div>
+                      A fully functional webpage with react hooks implementing dynamic data from apis' provided by the institution and a responsive page for both handheld devices and pc/desktops.
+                    </div>
+                    <button onClick={()=>{}}>click here to visit</button>
+                    </div>}
+                </div>
+                <div
+                  className="card"
+                  onMouseOver={handleMouseOver}
+                  onMouseOut={handleMouseOut}
+                >
+                  {!showCont && <div className="face">
+                    <div>
+                    Nalco <br /> Intranet <br /> Website
+                    </div>
+                    </div>}
+                  {showCont && <div className="cont">
+                  <div>
+                      A fully functional webpage with react hooks implementing dynamic data from apis' provided by the institution and a responsive page for both handheld devices and pc/desktops.
+                    </div>
+                    <button onClick={()=>{}}>click here to visit</button>
+                    </div>}
+                </div>
+                <div
+                  className="card"
+                  onMouseOver={handleMouseOver}
+                  onMouseOut={handleMouseOut}
+                >
+                  {!showCont && <div className="face">
+                    <div>
+                    Nalco <br /> Intranet <br /> Website
+                    </div>
+                    </div>}
+                  {showCont && <div className="cont">
+                  <div>
+                      A fully functional webpage with react hooks implementing dynamic data from apis' provided by the institution and a responsive page for both handheld devices and pc/desktops.
+                    </div>
+                    <button onClick={()=>{}}>click here to visit</button>
+                    </div>}
+                </div>
+                <div
+                  className="card"
+                  onMouseOver={handleMouseOver}
+                  onMouseOut={handleMouseOut}
+                >
+                  {!showCont && <div className="face">
+                    <div>
+                    Nalco <br /> Intranet <br /> Website
+                    </div>
+                    </div>}
+                  {showCont && <div className="cont">
+                  <div>
+                      A fully functional webpage with react hooks implementing dynamic data from apis' provided by the institution and a responsive page for both handheld devices and pc/desktops.
+                    </div>
+                    <button onClick={()=>{}}>click here to visit</button>
+                    </div>}
+                </div>
+                <div
+                  className="card"
+                  onMouseOver={handleMouseOver}
+                  onMouseOut={handleMouseOut}
+                >
+                  {!showCont && <div className="face">
+                    <div>
+                    Nalco <br /> Intranet <br /> Website
+                    </div>
+                    </div>}
+                  {showCont && <div className="cont">
+                  <div>
+                      A fully functional webpage with react hooks implementing dynamic data from apis' provided by the institution and a responsive page for both handheld devices and pc/desktops.
+                    </div>
+                    <button onClick={()=>{}}>click here to visit</button>
+                    </div>}
+                </div>
+                <div
+                  className="card"
+                  onMouseOver={handleMouseOver}
+                  onMouseOut={handleMouseOut}
+                >
+                  {!showCont && <div className="face">
+                    <div>
+                    Nalco <br /> Intranet <br /> Website
+                    </div>
+                    </div>}
+                  {showCont && <div className="cont">
+                  <div>
+                      A fully functional webpage with react hooks implementing dynamic data from apis' provided by the institution and a responsive page for both handheld devices and pc/desktops.
+                    </div>
+                    <button onClick={()=>{}}>click here to visit</button>
+                    </div>}
+                </div> */}
+                
+              </div>
+            </div>
+          ) : (
+            ""
+          )}
           {props.val === 5 ? <div>Hello 5</div> : ""}
         </div>
       </div>

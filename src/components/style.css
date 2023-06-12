@@ -424,3 +424,54 @@ a>i:hover{
     background-color: rgba(242, 242, 242,.4);
     box-shadow: 1px 1px 10px 10px rgba(242, 242, 242,.4);
 }
+
+#bio{
+  color: rgb(255, 255, 255) ;
+}
+#block{
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  /* background-color: white; */
+  height: 700px;
+  overflow: scroll;
+}
+#block::-webkit-scrollbar {
+  display: none;
+}
+
+#block>div{
+  width: 30%;
+  background-color: #ffffff54;
+  height: 280px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px 5px #ffffff54;
+}
+.heading{
+  color: white;
+  font-weight: 500;
+  font-size: 3em;
+  text-align: center;
+  line-height: 1.5;
+}
+.cont>div:nth-child(1){
+  padding: 15px;
+}
+.cont>button:nth-child(2){
+  background-color: inherit;
+  cursor: pointer;
+  color: white;
+  border: 1px solid #5f91ff;
+  font-size: 1.2em;
+}
+.cont>button:nth-child(2):hover{
+  color: orange;
+}
+.card{
+  cursor: pointer;
+}
