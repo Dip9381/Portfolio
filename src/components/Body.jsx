@@ -2,7 +2,12 @@ import React, { useState } from "react";
 import frame from "./images/frame.jpg";
 import profile from "./images/own.jpg";
 import resume from "../downloadable/RESUME.pdf";
-
+import HTML from '../components/images/html.png'
+import CSS from '../components/images/css.webp'
+import REACT from '../components/images/react.png'
+import NODE from '../components/images/nodejs.webp'
+import EXPRESS from '../components/images/express.png'
+import PUG from '../components/images/pug.png'
 const Body = (props) => {
   const [showCont, setShowCont] = useState(2);
   const [active, setactive] = useState(-1);
@@ -276,7 +281,40 @@ const Body = (props) => {
           ) : (
             ""
           )}
-          {props.val === 3 ? <div>Hello 3</div> : ""}
+          {props.val === 3 ? <>
+          
+          <div id="skills">
+            <div className="skill">
+              <img src={HTML} alt="" /> <br />
+              I possess strong skills in HTML5, enabling me to create modern, responsive websites with clean and semantic markup. I have experience in multimedia integration, form validation, and implementing accessibility best practices. I stay up-to-date with the latest HTML5 advancements to deliver cutting-edge web solutions.I excel in HTML5, delivering modern and responsive websites with clean, semantic markup. With expertise in multimedia integration, form validation, and accessibility best practices, I create user-friendly experiences. I stay current with the latest HTML5 advancements, ensuring my web solutions are at the forefront of innovation.
+            </div>
+            <br />
+            <div className="skill">
+              <img src={CSS} alt="" /> <br />
+              I have a strong command of CSS and SCSS, enabling me to create visually appealing and responsive designs for websites. With CSS, I can style web elements, apply animations and transitions, and implement layout techniques to enhance user experiences. Additionally, my expertise in SCSS empowers me to write clean and modular code, improving code maintainability and efficiency. By leveraging CSS and SCSS, I create stunning and flexible designs that bring websites to life.
+            </div>
+            <br />
+            <div className="skill">
+              <img src={REACT} alt="" /> <br />
+              I have advanced skills in React, specializing in component-based architecture, state management, and seamless navigation using React Router. With extensive experience integrating React with UI libraries like Universe, I can create visually stunning and highly interactive web applications. My in-depth knowledge of React's ecosystem allows me to leverage the right tools and libraries to optimize development productivity and deliver top-quality results.
+            </div>
+            <br />
+            <div className="skill">
+              <img src={NODE} alt="" /> <br />
+              I have strong skills in Node.js, specializing in server-side development and building scalable applications. With expertise in the Express.js framework, I can rapidly develop web applications and APIs. I am also experienced in integrating Node.js with databases, including MongoDB, for efficient data storage and retrieval.
+            </div>
+            <br />
+            <div className="skill">
+              <img src={EXPRESS} alt="" /> <br />
+              I am skilled in Express.js, a minimalist web application framework for Node.js. With Express.js, I can efficiently develop web applications and APIs, handle routing, integrate middleware, and implement error handling. I have experience in API development and custom middleware creation, enabling me to create robust and scalable web solutions.
+            </div>
+            <br />
+            <div className="skill">
+              <img src={PUG} alt="" /> <br />
+              I am skilled in working with the Pug template engine, which allows for concise and expressive templating in Node.js. With Pug, I can efficiently generate dynamic HTML content, utilizing its concise syntax and features like variables, conditionals, and layout inheritance. This enables code reusability and enhances the efficiency of template creation.
+            </div>
+          </div>
+          </>: ""}
           {props.val === 4 ? (
             <div>
               <div id="block">
@@ -366,6 +404,26 @@ const Body = (props) => {
                   onMouseOut={()=>{handleMouseOut(1,5)}}
                 >
                   {active===5?
+                  <>
+                {showCont===2 && <div className="cont">
+                <div>
+                    A personalised chat space that gives you access to talk and share pictures with your personal contacts fired by firebase abd react js and styles using scss.
+                  </div>
+                  <button onClick={()=>{}}>click here to visit</button>
+                  </div>}
+                  </>
+                  :
+                  <div className="heading">
+                  Personalised Chatting Appliaction
+                  </div>
+                  }
+                </div>
+                 <div
+                  className="card"
+                  onMouseOver={()=>{handleMouseOver(2,6)}}
+                  onMouseOut={()=>{handleMouseOut(1,6)}}
+                >
+                  {active===6?
                   <>
                 {showCont===2 && <div className="cont">
                 <div>
@@ -505,7 +563,7 @@ const Body = (props) => {
           ) : (
             ""
           )}
-          {props.val === 5 ? <div>Hello 5</div> : ""}
+          {props.val === 5 ? <div></div> : ""}
         </div>
       </div>
     </>

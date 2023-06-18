@@ -428,6 +428,25 @@ a>i:hover{
 #bio{
   color: rgb(255, 255, 255) ;
 }
+#skills{
+  width: 90%;
+  height: 62%;
+  /* background-color: aqua; */
+  margin-left: auto;
+  margin-right: auto;
+  overflow: scroll;
+}
+.skill>img{
+  width: 8%;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  font-size: 1.2em;
+  font-weight: 500;
+}
+.skill{
+  color: white;
+}
+
 #block{
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
