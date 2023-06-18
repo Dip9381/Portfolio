@@ -329,7 +329,7 @@ const Body = (props) => {
                 <div>
                     A fully functional webpage with react hooks implementing dynamic data from apis' provided by the institution and a responsive page for both handheld devices and pc/desktops.
                   </div>
-                  <button onClick={()=>{}}>click here to visit</button>
+                  <button onClick={()=>{window.open('https://dip9381.github.io/Nalco-Intranet-Website/')}}>click here to visit</button>
                   </div>}
                   </>
                   :
@@ -349,7 +349,7 @@ const Body = (props) => {
                 <div>
                     A fullstack implemntation using MERN. The project comprises of both student and teacher login where the teacher can view coressponding student details. For a student login it has biodata, marks , attendance and payment page. Additionally the portal has login authentication and also password change facility.
                   </div>
-                  <button onClick={()=>{}}>click here to visit</button>
+                  <button onClick={()=>{window.open('https://github.com/Dip9381/Student-Portal')}}>click here to visit</button>
                   </div>}
                   </>
                   :
@@ -369,7 +369,7 @@ const Body = (props) => {
                 <div>
                     Here we have utilised pug template engine on express js to create the client side apllication and browser local storage to make the notes making real time.
                   </div>
-                  <button onClick={()=>{}}>click here to visit</button>
+                  <button onClick={()=>{window.open('https://github.com/Dip9381/Notes-saving-website')}}>click here to visit</button>
                   </div>}
                   </>
                   :
@@ -389,7 +389,7 @@ const Body = (props) => {
                 <div>
                     A complete api tour, where multiple apis' has been used for weather forecast for next 8 days, live weather report, articles and normal news that refreshes to a new content on each reload for dynamic preview of data.
                   </div>
-                  <button onClick={()=>{}}>click here to visit</button>
+                  <button onClick={()=>{window.open('https://dip9381.github.io/WeatherSense/')}}>click here to visit</button>
                   </div>}
                   </>
                   :
@@ -409,7 +409,7 @@ const Body = (props) => {
                 <div>
                     A personalised chat space that gives you access to talk and share pictures with your personal contacts fired by firebase abd react js and styles using scss.
                   </div>
-                  <button onClick={()=>{}}>click here to visit</button>
+                  <button onClick={()=>{window.open('https://dip9381.github.io/weebChat/')}}>click here to visit</button>
                   </div>}
                   </>
                   :
@@ -429,7 +429,7 @@ const Body = (props) => {
                 <div>
                     A simple example of javascript functions used in react achieved using onkeyup attribute.
                   </div>
-                  <button onClick={()=>{}}>click here to visit</button>
+                  <button onClick={()=>{window.open('https://dip9381.github.io/react-task-1/')}}>click here to visit</button>
                   </div>}
                   </>
                   :
